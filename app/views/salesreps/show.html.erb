@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @salesrep.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @salesrep.lastname %>
+</p>
+
+<p>
+  <strong>Territory:</strong>
+  <%= @salesrep.territory %>
+</p>
+
+<p>
+  <strong>Quota:</strong>
+  <%= @salesrep.quota %>
+</p>
+
+<%= link_to 'Edit', edit_salesrep_path(@salesrep) %> |
+<%= link_to 'Back', salesreps_path %>

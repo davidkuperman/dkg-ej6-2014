@@ -1,0 +1,33 @@
+<h1>Listing salesreps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Territory</th>
+      <th>Quota</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @salesreps.each do |salesrep| %>
+      <tr>
+        <td><%= salesrep.name %></td>
+        <td><%= salesrep.lastname %></td>
+        <td><%= salesrep.territory %></td>
+        <td><%= salesrep.quota %></td>
+        <td><%= link_to 'Show', salesrep %></td>
+        <td><%= link_to 'Edit', edit_salesrep_path(salesrep) %></td>
+        <td><%= link_to 'Destroy', salesrep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Salesrep', new_salesrep_path %>
